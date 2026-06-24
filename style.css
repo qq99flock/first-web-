@@ -1,0 +1,20 @@
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{background:#f4f4f4}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:240px;background:#fff;position:sticky;top:0;height:100vh;padding:20px}
+.sidebar ul{list-style:none}
+.sidebar li{padding:12px;margin:8px 0}
+.sidebar .active{background:#e91e63;color:#fff}
+.content{flex:1;padding:20px}
+.cards,.charts{display:grid;gap:15px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.charts{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:20px}
+.card,.panel{background:#fff;padding:20px;border-radius:8px}
+.tables{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:20px}
+footer{margin-top:20px;background:#fff;padding:15px;display:flex;justify-content:space-between;flex-wrap:wrap}
+form{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+input,textarea{padding:10px;width:100%}
+.profile{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+@media(max-width:800px){.sidebar{width:180px}.tables,.profile,form{grid-template-columns:1fr}}
+@media(max-width:500px){.layout{flex-direction:column}.sidebar{position:relative;width:100%;height:auto}}
